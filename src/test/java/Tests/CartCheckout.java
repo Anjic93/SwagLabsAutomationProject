@@ -35,6 +35,7 @@ public class CartCheckout extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
         Assert.assertEquals(productsPage.getTitle(), "Products");
         Assert.assertTrue(productsPage.productList.isDisplayed());
+
     }
 
     @Test(priority = 10)

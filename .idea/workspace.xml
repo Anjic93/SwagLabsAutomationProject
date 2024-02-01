@@ -7,6 +7,7 @@
     <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +47,8 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.CartCheckout.verifyThatTotalPriceContainsAllAddedProductsPrices">
-    <configuration name="AddProductInCartFromProductsPage.userCanRemoveProductFromCartFromProducts" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart">
+    <configuration name="AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -57,7 +58,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromProductsPage" />
-      <option name="METHOD_NAME" value="userCanRemoveProductFromCartFromProducts" />
+      <option name="METHOD_NAME" value="userCanAddMultipleProductsToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -65,7 +66,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddProductInCartFromProductsPage.userCanAddProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -74,8 +75,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromProductsPage" />
+      <option name="METHOD_NAME" value="userCanAddProductToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddProductInCartFromProductsPage.userCanAddSingleProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromProductsPage" />
+      <option name="METHOD_NAME" value="userCanAddSingleProductToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -93,24 +113,6 @@
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
       <option name="METHOD_NAME" value="userCanFinishPurchase" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CartCheckout.userCanProceedToCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
-      <option name="METHOD_NAME" value="userCanProceedToCheckout" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart" />
+        <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddSingleProductToCart" />
+        <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddProductToCart" />
         <item itemvalue="TestNG.CartCheckout.verifyThatTotalPriceContainsAllAddedProductsPrices" />
         <item itemvalue="TestNG.CartCheckout.userCanFinishPurchase" />
-        <item itemvalue="TestNG.CartCheckout.userCanProceedToCheckout" />
-        <item itemvalue="TestNG.CartCheckout" />
-        <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanRemoveProductFromCartFromProducts" />
       </list>
     </recent_temporary>
   </component>

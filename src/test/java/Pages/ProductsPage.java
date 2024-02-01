@@ -39,6 +39,9 @@ public class ProductsPage extends BaseTest {
     @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
     public WebElement removeButton;
 
+    @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
+    public List<WebElement> removeButtonCount;
+
 
     //-------------------------
 
@@ -88,7 +91,25 @@ public void clickOnRemoveButton() {
         removeButton.click();
     }
 }
-}
+
+
+    public void verifyCartBadgeNumberOfAddedProducts() {
+        String badgeText = cartBadge.getText();
+        int badgeNumber = Integer.parseInt(badgeText);
+        System.out.println("Number of products in cart, on cart badge: " + badgeNumber);
+        int addedProductsCount = removeButtonCount.size();
+        System.out.println("Number of added products from Products page: " + addedProductsCount);
+
+        if(badgeNumber == addedProductsCount) {
+            System.out.println("Number of added products is equal to cart badge number");
+        } else {
+            System.out.println("Number of added products is not equal to cart badge number");
+        }
+
+
+    }
+    }
+
 
 
 

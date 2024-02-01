@@ -46,15 +46,30 @@ public class AddProductInCartFromProductsPage extends BaseTest {
     }
 
     @Test(priority = 20)
-    public void userCanAddProductToCart() {
+    public void userCanAddSingleProductToCart() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+        productsPage.verifyCartBadgeNumberOfAddedProducts();
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
+
+    @Test(priority = 25)
+    public void userCanAddMultipleProductsToCart() {
+        productsPage.clickOnMultipleAddToCartProdButton();
+        Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+        productsPage.verifyCartBadgeNumberOfAddedProducts();
+        productsPage.clickOnCartIcon();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+        cartPage.clickOnContinueShoppButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+    }
+
+
 
     @Test(priority = 30)
     public void userCanRemoveProductFromCartFromProducts() {
