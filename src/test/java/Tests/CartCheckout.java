@@ -71,6 +71,7 @@ public class CartCheckout extends BaseTest {
         Assert.assertEquals(purchaseOverviewPage.overviewPageTitleName(), "Checkout: Overview");
         Assert.assertTrue(purchaseOverviewPage.purchaseInfo.isDisplayed());
 
+
         purchaseOverviewPage.clickOnFinishButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
         Assert.assertEquals(purchaseCompletePage.completePageTitleName(), "Checkout: Complete!");
@@ -81,6 +82,33 @@ public class CartCheckout extends BaseTest {
         purchaseCompletePage.clickOnBackHomeButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
 
+    }
+
+    @Test(priority = 25)
+    public void verifyThatTotalPriceContainsAllAddedProductsPrices() {
+        productsPage.clickOnAddToCartProdButton();
+        productsPage.clickOnAddToCartProdButton();
+        productsPage.clickOnAddToCartProdButton();
+        Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
+        productsPage.clickOnCartIcon();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+
+        cartPage.clickOnCheckoutButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
+        Assert.assertEquals(checkoutPage.getCheckoutPageTitle(), "Checkout: Your Information");
+        Assert.assertTrue(checkoutPage.checkoutForm.isDisplayed());
+
+        checkoutPage.inputFirstName("Petar");
+        checkoutPage.inputLastName("Petrovic");
+        checkoutPage.inputPostalCode("11000");
+        checkoutPage.clickOnContinueButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
+        Assert.assertEquals(purchaseOverviewPage.overviewPageTitleName(), "Checkout: Overview");
+        Assert.assertTrue(purchaseOverviewPage.purchaseInfo.isDisplayed());
+
+        purchaseOverviewPage.getTotalPrice();
     }
 
     @Test(priority = 30)
@@ -213,9 +241,11 @@ public class CartCheckout extends BaseTest {
     }
 
 
-       @AfterMethod
+      /* @AfterMethod
     public void tearDown() {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
+
+       */
 }
