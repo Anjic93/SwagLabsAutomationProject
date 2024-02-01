@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/PurchaseOverviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/PurchaseOverviewPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +46,7 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart">
+  <component name="RunManager" selected="TestNG.CartCheckout.verifyThatTotalPriceContainsAllAddedProductsPrices">
     <configuration name="AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
@@ -102,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartCheckout.userCanFinishPurchase" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -112,8 +111,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
-      <option name="METHOD_NAME" value="userCanFinishPurchase" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -140,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartCheckout.verifyThatTotalPriceContainsAllAddedProductsPrices" />
+        <item itemvalue="TestNG.CartCheckout" />
         <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddMultipleProductsToCart" />
         <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddSingleProductToCart" />
         <item itemvalue="TestNG.AddProductInCartFromProductsPage.userCanAddProductToCart" />
-        <item itemvalue="TestNG.CartCheckout.verifyThatTotalPriceContainsAllAddedProductsPrices" />
-        <item itemvalue="TestNG.CartCheckout.userCanFinishPurchase" />
       </list>
     </recent_temporary>
   </component>

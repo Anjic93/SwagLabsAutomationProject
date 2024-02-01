@@ -242,11 +242,13 @@ public class CartCheckout extends BaseTest {
     }
 
 
-      /* @AfterMethod
+       /*@AfterMethod
     public void tearDown() {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
 
-       */
+        */
+
+
 }

@@ -30,6 +30,9 @@ public class PurchaseOverviewPage extends BaseTest {
     @FindBy(className = "inventory_item_price")
     public List<WebElement> productPrice;
 
+    @FindBy(className = "summary_tax_label")
+    public WebElement tax;
+
 
     //-----------------------
 
@@ -51,22 +54,34 @@ public class PurchaseOverviewPage extends BaseTest {
 
         double totalPrice = 0.0;
         double subtotal;
+        double taxNumb;
+        double total;
 
         for (WebElement productPriceElement : productPrice) {
             String productPriceText = productPriceElement.getText();
             double productPrice = Double.parseDouble(productPriceText.replaceAll("[^\\d.]", ""));
+            System.out.println("Product price: " + productPrice);
             totalPrice += productPrice;
         }
-        System.out.println(totalPrice);
+        System.out.println("Item total: " + totalPrice);
 
         String subtotalText = totalPriceCount.getText();
         subtotal = Double.parseDouble(subtotalText.replaceAll("[^\\d.]", ""));
+        System.out.println("Subtotal: " + subtotal);
+
+        String taxText = tax.getText();
+        taxNumb = Double.parseDouble(taxText.replaceAll("[^\\d.]", ""));
+        System.out.println("Tax: " + taxNumb);
+        total = subtotal + taxNumb;
+        System.out.println("Total(with tax): " + total);
 
        if(totalPrice == subtotal) {
            System.out.println("Individual product prices sum up to the subtotal price");
        } else {
            System.out.println("Individual product prices do not sum up to the subtotal price");
         }
+
+
     }
 
 }
