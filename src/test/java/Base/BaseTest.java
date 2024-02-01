@@ -1,11 +1,9 @@
 package Base;
 
-import Pages.CartPage;
-import Pages.IndividualProductPage;
-import Pages.LoginPage;
-import Pages.ProductsPage;
+import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 
 import java.io.IOException;
@@ -18,6 +16,9 @@ public class BaseTest {
     public ProductsPage productsPage;
     public CartPage cartPage;
     public IndividualProductPage individualProductPage;
+    public CheckoutPage checkoutPage;
+    public PurchaseOverviewPage purchaseOverviewPage;
+    public PurchaseCompletePage purchaseCompletePage;
 
 
     @BeforeClass

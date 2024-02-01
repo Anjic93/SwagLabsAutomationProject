@@ -52,7 +52,6 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/");
         Assert.assertTrue(loginPage.loginButton.isDisplayed());
     }
-
     @Test(priority = 30)
     public void userCanNotLogInWithInvalidUsername() {
         for (int i = 1; i < 4; i++) {
@@ -109,11 +108,13 @@ public class LoginTest extends BaseTest {
 
 
 
-  @AfterMethod
+ /* @AfterMethod
     public void tearDown() {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
+
+  */
 
 }
 

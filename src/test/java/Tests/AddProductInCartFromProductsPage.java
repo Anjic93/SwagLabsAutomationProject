@@ -6,6 +6,7 @@ import Pages.LoginPage;
 import Pages.ProductsPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,8 +25,8 @@ public class AddProductInCartFromProductsPage extends BaseTest {
         productsPage = new ProductsPage();
         cartPage = new CartPage();
 
-        String validUsername = excelReader.getStringData("Credentials",1,0);
-        String validPassword= excelReader.getStringData("Credentials",1,1);
+        String validUsername = excelReader.getStringData("Credentials", 1, 0);
+        String validPassword = excelReader.getStringData("Credentials", 1, 1);
         loginPage.inputUsername(validUsername);
         loginPage.inputPassword(validPassword);
         loginPage.clickOnLoginButton();
@@ -41,26 +42,36 @@ public class AddProductInCartFromProductsPage extends BaseTest {
         Assert.assertEquals(cartPage.getCartTitle(), "Your Cart");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
         cartPage.clickOnContinueShoppButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
     @Test(priority = 20)
-    public void addProductToCart() {
+    public void userCanAddProductToCart() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+        cartPage.clickOnContinueShoppButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+    }
+
+    @Test(priority = 30)
+    public void userCanRemoveProductFromCartFromProducts() {
+        productsPage.clickOnAddToCartProdButton();
+        productsPage.assertRemoveButton();
+        productsPage.clickOnRemoveButton();
+        productsPage.clickOnCartIcon();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        Assert.assertTrue(cartPage.productsListInCart.isEmpty());
+        cartPage.clickOnContinueShoppButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
 
-
-
-    /*  @AfterMethod
+    @AfterMethod
     public void tearDown() {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
-
-   */
-
 }

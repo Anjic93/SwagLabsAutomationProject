@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Base/ExcelReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/IndividualProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/IndividualProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/IndividualProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +25,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,11 +46,29 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "C:/Users/Andrijana Locki/IdeaProjects/SwagLabs/src/main/java/org/example/Main.java"
+    "git-widget-placeholder": "main",
+    "onboarding.tips.debug.path": "C:/Users/Andrijana Locki/IdeaProjects/SwagLabs/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.LoginTest">
+  <component name="RunManager" selected="TestNG.AddProductInCartFromIndividualProductPage">
+    <configuration name="AddProductInCartFromIndividualProductPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromIndividualProductPage" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddProductInCartFromProductsPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
@@ -74,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -83,7 +95,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -91,7 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.userCanNotLogInWithInvalidPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartCheckout.userCanCancelCheckout" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +112,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
-      <option name="METHOD_NAME" value="userCanNotLogInWithInvalidPassword" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
+      <option name="METHOD_NAME" value="userCanCancelCheckout" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.userCanNotLogInWithInvalidUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartCheckout.userCanCancelPurchase" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -118,26 +130,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
-      <option name="METHOD_NAME" value="userCanNotLogInWithInvalidUsername" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.userCanNotLogInWithInvalidUsernameAndPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.LoginTest" />
-      <option name="METHOD_NAME" value="userCanNotLogInWithInvalidUsernameAndPassword" />
+      <option name="MAIN_CLASS_NAME" value="Tests.CartCheckout" />
+      <option name="METHOD_NAME" value="userCanCancelPurchase" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.LoginTest.userCanNotLogInWithInvalidUsernameAndPassword" />
-        <item itemvalue="TestNG.LoginTest.userCanNotLogInWithInvalidPassword" />
-        <item itemvalue="TestNG.LoginTest.userCanNotLogInWithInvalidUsername" />
+        <item itemvalue="TestNG.AddProductInCartFromIndividualProductPage" />
         <item itemvalue="TestNG.AddProductInCartFromProductsPage" />
+        <item itemvalue="TestNG.CartCheckout" />
+        <item itemvalue="TestNG.CartCheckout.userCanCancelPurchase" />
+        <item itemvalue="TestNG.CartCheckout.userCanCancelCheckout" />
       </list>
     </recent_temporary>
   </component>

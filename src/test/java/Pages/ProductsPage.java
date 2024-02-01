@@ -36,6 +36,8 @@ public class ProductsPage extends BaseTest {
 
     @FindBy(className = "shopping_cart_badge")
     public WebElement cartBadge;
+    @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
+    public WebElement removeButton;
 
 
     //-------------------------
@@ -66,7 +68,20 @@ public void clickOnAddToCartProdButton() {
     addToCartButtonProd.get(randomNumber).click();
 }
 
+    public void assertRemoveButton() {
+        if (removeButton.getText().contains("Remove")) {
+            removeButton.isDisplayed();
+        }
+    }
+
+public void clickOnRemoveButton() {
+    if (removeButton.getText().contains("Remove")) {
+        removeButton.click();
+    }
 }
+}
+
+
 
 
 

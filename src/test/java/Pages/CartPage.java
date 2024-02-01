@@ -23,6 +23,8 @@ public class CartPage extends BaseTest {
 
     @FindBy(id = "continue-shopping")
     public WebElement continueShoppButton;
+    @FindBy(id = "checkout")
+    public WebElement checkoutButton;
 
     //-------------------------
 
@@ -38,4 +40,7 @@ public class CartPage extends BaseTest {
         continueShoppButton.click();
     }
 
+    public void clickOnCheckoutButton() {
+        checkoutButton.click();
+    }
 }

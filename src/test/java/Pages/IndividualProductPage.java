@@ -25,6 +25,9 @@ public class IndividualProductPage extends BaseTest {
 
     @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
     public WebElement removeButton;
+    @FindBy(className = "shopping_cart_link")
+    public WebElement cartIcon2;
+
 
 
     //-----------------------
@@ -44,7 +47,15 @@ public class IndividualProductPage extends BaseTest {
         if(removeButton.getText().contains("Remove")) {
             removeButton.isDisplayed();
         }
+    }
 
+    public void clickRemoveButton() {
+        if(removeButton.getText().contains("Remove")) {
+            removeButton.click();
+        }
+    }
+    public void clickCartIcon() {
+        cartIcon2.click();
     }
 
 
