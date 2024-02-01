@@ -68,6 +68,15 @@ public void clickOnAddToCartProdButton() {
     addToCartButtonProd.get(randomNumber).click();
 }
 
+  public void clickOnMultipleAddToCartProdButton() {
+       for (int i = 0; i < addToCartButtonProd.size(); i++) {
+           Random random = new Random();
+           int randomNumber = random.nextInt(addToCartButtonProd.size());
+           addToCartButtonProd.get(randomNumber).click();
+       }
+   }
+
+
     public void assertRemoveButton() {
         if (removeButton.getText().contains("Remove")) {
             removeButton.isDisplayed();
