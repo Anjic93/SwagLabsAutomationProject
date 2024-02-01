@@ -2,6 +2,7 @@ package Base;
 
 import Pages.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
@@ -25,6 +26,16 @@ public class BaseTest {
     public void setUp() throws IOException {
         WebDriverManager.chromedriver().setup();
         excelReader = new ExcelReader("Credentials.xlsx");
+    }
+
+    public boolean isElementPresent(WebElement el){
+        try{
+            el.isDisplayed();
+            return true;
+        }
+        catch(NoSuchElementException e){
+            return false;
+        }
     }
 
 }

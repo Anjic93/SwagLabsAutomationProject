@@ -61,6 +61,7 @@ public class AddProductInCartFromProductsPage extends BaseTest {
         productsPage.clickOnAddToCartProdButton();
         productsPage.assertRemoveButton();
         productsPage.clickOnRemoveButton();
+        isElementPresent(productsPage.cartBadge);
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
