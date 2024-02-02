@@ -42,6 +42,27 @@ public class ProductsPage extends BaseTest {
     @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
     public List<WebElement> removeButtonCount;
 
+    @FindBy(className = "product_sort_container")
+    public WebElement sortDropDown;
+
+    @FindBy(className = "active_option")
+    public WebElement sortMenuName;
+
+    @FindBy(tagName = "option")
+    public List<WebElement> dropDownOption;
+
+    @FindBy(tagName = "option")
+    public WebElement dropDownOption2;
+
+    @FindBy(className = "social_twitter")
+    public WebElement twitter;
+
+    @FindBy(className = "social_facebook")
+    public WebElement facebook;
+
+    @FindBy(className = "social_linkedin")
+    public WebElement linkedin;
+
 
     //-------------------------
 
@@ -105,10 +126,40 @@ public void clickOnRemoveButton() {
         } else {
             System.out.println("Number of added products is not equal to cart badge number");
         }
+    }
+
+    public void clickOnSortDropDown() {
+    sortDropDown.click();
+    }
+
+    public String getSortMenuName() {
+        return sortMenuName.getText();
+    }
+
+    public void chooseDropDownOption() {
+            Random random = new Random();
+            int randomNumber2 = random.nextInt(dropDownOption.size());
+            dropDownOption.get(randomNumber2).click();
+        }
 
 
+    public void clickOnTwitter() {
+    twitter.click();
     }
+
+    public void clickOnFacebook() {
+    facebook.click();
     }
+
+    public void clickOnLinkedin() {
+    linkedin.click();
+    }
+
+    }
+
+
+
+
 
 
 
