@@ -4,6 +4,7 @@ import Base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.Random;
@@ -50,7 +51,6 @@ public class ProductsPage extends BaseTest {
 
     @FindBy(tagName = "option")
     public List<WebElement> dropDownOption;
-
     @FindBy(tagName = "option")
     public WebElement dropDownOption2;
 
@@ -136,11 +136,16 @@ public void clickOnRemoveButton() {
         return sortMenuName.getText();
     }
 
-    public void chooseDropDownOption() {
-            Random random = new Random();
-            int randomNumber2 = random.nextInt(dropDownOption.size());
-            dropDownOption.get(randomNumber2).click();
-        }
+    public void selectDropDownOption() {
+        Random random = new Random();
+        int randomNumber2 = random.nextInt(dropDownOption.size());
+        dropDownOption.get(randomNumber2).click();
+            }
+
+    public String getSelectedOption() {
+        Select dropdownMenu = new Select(sortDropDown);
+        return dropdownMenu.getFirstSelectedOption().getText();
+    }
 
 
     public void clickOnTwitter() {

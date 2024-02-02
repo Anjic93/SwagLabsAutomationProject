@@ -7,8 +7,8 @@
     <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartCheckout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SortMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SortMenuTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +47,8 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.FooterTest">
-    <configuration name="AddProductInCartFromIndividualProductPage" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SortMenuTest.userCanChangeSortOptionFromDropDownMenu">
+    <configuration name="AddProductInCartFromIndividualProductPage.userCanAddProductFromIndividualProductPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabs" />
       <extension name="coverage">
         <pattern>
@@ -58,24 +58,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="Tests" />
       <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromIndividualProductPage" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddProductInCartFromProductsPage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.AddProductInCartFromProductsPage" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="userCanAddProductFromIndividualProductPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,13 +117,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortMenuTest.userCanChangeSortOptionFromDropDownMenu" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.SortMenuTest" />
+      <option name="METHOD_NAME" value="userCanChangeSortOptionFromDropDownMenu" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SortMenuTest.userCanChangeSortOptionFromDropDownMenu" />
+        <item itemvalue="TestNG.AddProductInCartFromIndividualProductPage.userCanAddProductFromIndividualProductPage" />
         <item itemvalue="TestNG.FooterTest" />
         <item itemvalue="TestNG.CartCheckout" />
         <item itemvalue="TestNG.SortMenuTest" />
-        <item itemvalue="TestNG.AddProductInCartFromIndividualProductPage" />
-        <item itemvalue="TestNG.AddProductInCartFromProductsPage" />
       </list>
     </recent_temporary>
   </component>

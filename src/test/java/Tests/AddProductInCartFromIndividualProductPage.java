@@ -48,19 +48,19 @@ public class AddProductInCartFromIndividualProductPage extends BaseTest {
     }
     @Test(priority = 20)
     public void userCanAddProductFromIndividualProductPage() {
-        productsPage.addRandomProduct();
-        String addedProduct = individualProductPage.getIndProductTitle();
-        System.out.println(addedProduct);
-        Assert.assertTrue(individualProductPage.backToProductsButton.isDisplayed());
+            productsPage.addRandomProduct();
+            String addedProduct = individualProductPage.getIndProductTitle();
+            System.out.println(addedProduct);
+            Assert.assertTrue(individualProductPage.backToProductsButton.isDisplayed());
 
-        individualProductPage.clickOnAddToCartIndButton();
-        individualProductPage.checkRemoveButton();
-        Assert.assertTrue(productsPage.cartBadge.isDisplayed());
-        productsPage.clickOnCartIcon();
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
-        Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
-        Assert.assertEquals(cartPage.getProductNameInList(), addedProduct);
-    }
+            individualProductPage.clickOnAddToCartIndButton();
+            individualProductPage.checkRemoveButton();
+            Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+            productsPage.clickOnCartIcon();
+            Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+            Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+            Assert.assertEquals(cartPage.getProductNameInList(), addedProduct);
+        }
 
     @Test(priority = 30)
     public void userCanRemoveProductFromCart() {
