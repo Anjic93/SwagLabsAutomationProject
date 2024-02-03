@@ -45,11 +45,11 @@ public class SortMenuTest extends BaseTest {
         productsPage.clickOnSortDropDown();
         Assert.assertTrue(productsPage.dropDownOption2.isDisplayed());
 
-        for(int i=0; i<3; i++) {
+        for(int i=0; i<3; i++) { //loop for iteration through drop down menu
             productsPage.selectDropDownOption();
-            String selectedOption = productsPage.getSelectedOption();
+            String selectedOption = productsPage.getSelectedOption();  //to get only selected option
             System.out.println("Selected option: " + selectedOption);
-            Assert.assertEquals(selectedOption, productsPage.getSortMenuName());
+            Assert.assertEquals(selectedOption, productsPage.getSortMenuName()); //to verify that sort order is by selected option
             System.out.println("Sort Menu title: " + productsPage.getSortMenuName());
         }
     }

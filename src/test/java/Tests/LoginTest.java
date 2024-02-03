@@ -18,7 +18,8 @@ public class LoginTest extends BaseTest {
         driver = new ChromeDriver();
         driver.navigate().to("https://www.saucedemo.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); //to wait for a specific condition in
+                                                            // case some elements are not visible at the moment
 
         loginPage = new LoginPage();
         productsPage = new ProductsPage();
@@ -47,6 +48,7 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
         Assert.assertEquals(productsPage.getTitle(), "Products");
         Assert.assertTrue(productsPage.productList.isDisplayed());
+
         productsPage.clickOnBurgerButton();
         productsPage.clickOnLogoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/");
@@ -54,7 +56,7 @@ public class LoginTest extends BaseTest {
     }
     @Test(priority = 30)
     public void userCanNotLogInWithInvalidUsername() {
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 4; i++) {   //loop for iteration through excel file
             String invalidUsername = excelReader.getStringData("Credentials", i, 2);
             String validPassword= excelReader.getStringData("Credentials",1,1);
             loginPage.inputUsername(invalidUsername);

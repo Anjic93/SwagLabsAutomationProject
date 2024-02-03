@@ -42,9 +42,11 @@ public class CartCheckout extends BaseTest {
     public void userCanProceedToCheckout() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+
         cartPage.clickOnCheckoutButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
         Assert.assertEquals(checkoutPage.getCheckoutPageTitle(), "Checkout: Your Information");
@@ -55,6 +57,7 @@ public class CartCheckout extends BaseTest {
     public void userCanFinishPurchase() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -76,8 +79,8 @@ public class CartCheckout extends BaseTest {
         purchaseOverviewPage.clickOnFinishButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
         Assert.assertEquals(purchaseCompletePage.completePageTitleName(), "Checkout: Complete!");
-        Assert.assertTrue(purchaseCompletePage.thankYouMsg.isDisplayed());
-        Assert.assertEquals(purchaseCompletePage.getThankYouMsg(), "Thank you for your order!");
+        Assert.assertTrue(purchaseCompletePage.thankYouMsg.isDisplayed());  //to verify that Thank You message id displayed
+        Assert.assertEquals(purchaseCompletePage.getThankYouMsg(), "Thank you for your order!");  //to confirm that message displayed on the page is Thank You message
         Assert.assertTrue(purchaseCompletePage.backHomeButton.isDisplayed());
 
         purchaseCompletePage.clickOnBackHomeButton();
@@ -108,7 +111,7 @@ public class CartCheckout extends BaseTest {
             Assert.assertEquals(purchaseOverviewPage.overviewPageTitleName(), "Checkout: Overview");
             Assert.assertTrue(purchaseOverviewPage.purchaseInfo.isDisplayed());
 
-            purchaseOverviewPage.getTotalPrice();
+            purchaseOverviewPage.getTotalPrice(); //to verify that prices are correct
         }
 
 
@@ -116,6 +119,7 @@ public class CartCheckout extends BaseTest {
     public void userCantFinishPurchaseWithEmptyForm() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -137,6 +141,7 @@ public class CartCheckout extends BaseTest {
     public void userCantFinishPurchaseWithEmptyFirstNameField() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -158,6 +163,7 @@ public class CartCheckout extends BaseTest {
     public void userCantFinishPurchaseWithEmptyLastNameField() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -179,6 +185,7 @@ public class CartCheckout extends BaseTest {
     public void userCantFinishPurchaseWithEmptyPostalCodeField() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -200,6 +207,7 @@ public class CartCheckout extends BaseTest {
     public void userCanCancelCheckout() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -209,7 +217,7 @@ public class CartCheckout extends BaseTest {
         Assert.assertEquals(checkoutPage.getCheckoutPageTitle(), "Checkout: Your Information");
         Assert.assertTrue(checkoutPage.checkoutForm.isDisplayed());
 
-        checkoutPage.clickOnCancelButton();
+        checkoutPage.clickOnCancelButton();  //to verify that cancel button for checkout works
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.checkoutButton.isDisplayed());
     }
@@ -218,6 +226,7 @@ public class CartCheckout extends BaseTest {
     public void userCanCancelPurchase() {
         productsPage.clickOnAddToCartProdButton();
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
@@ -235,7 +244,7 @@ public class CartCheckout extends BaseTest {
         Assert.assertEquals(purchaseOverviewPage.overviewPageTitleName(), "Checkout: Overview");
         Assert.assertTrue(purchaseOverviewPage.purchaseInfo.isDisplayed());
 
-        purchaseOverviewPage.clickOnCancelButton();
+        purchaseOverviewPage.clickOnCancelButton();  //to verify that cancel button for purchase works
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
         Assert.assertEquals(productsPage.getTitle(), "Products");
         Assert.assertTrue(productsPage.productList.isDisplayed());

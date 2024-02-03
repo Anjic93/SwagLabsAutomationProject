@@ -36,35 +36,40 @@ public class AddProductInCartFromProductsPage extends BaseTest {
     }
 
     @Test(priority = 10)
-    public void checkIfCartIsEmpty() {
+    public void checkIfCartIsEmpty() {  //to verify that cart is empty before adding products
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertEquals(cartPage.getCartTitle(), "Your Cart");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
+
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
     @Test(priority = 20)
     public void userCanAddSingleProductToCart() {
-        productsPage.clickOnAddToCartProdButton();
+        productsPage.clickOnAddToCartProdButton();  //for adding one product to the cart
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
         productsPage.verifyCartBadgeNumberOfAddedProducts();
-        productsPage.clickOnCartIcon();
+
+        productsPage.clickOnCartIcon();  //to verify that added product is in the cart
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
-        cartPage.clickOnContinueShoppButton();
+
+        cartPage.clickOnContinueShoppButton();  //to go back on products page and continue shopping
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
     @Test(priority = 25)
     public void userCanAddMultipleProductsToCart() {
-        productsPage.clickOnMultipleAddToCartProdButton();
+        productsPage.clickOnMultipleAddToCartProdButton();  //for adding multiple products to the cart
         Assert.assertTrue(productsPage.cartBadge.isDisplayed());
         productsPage.verifyCartBadgeNumberOfAddedProducts();
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
+
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
@@ -74,12 +79,14 @@ public class AddProductInCartFromProductsPage extends BaseTest {
     @Test(priority = 30)
     public void userCanRemoveProductFromCartFromProducts() {
         productsPage.clickOnAddToCartProdButton();
-        productsPage.assertRemoveButton();
+        productsPage.assertRemoveButton();  //to verify that remove button is displayed after adding product
         productsPage.clickOnRemoveButton();
-        isElementPresent(productsPage.cartBadge);
+        isElementPresent(productsPage.cartBadge);  //to verify that cart badge is displayed after adding product
+
         productsPage.clickOnCartIcon();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
+
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }

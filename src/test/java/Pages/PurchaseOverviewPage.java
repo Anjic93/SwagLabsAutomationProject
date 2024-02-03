@@ -18,7 +18,7 @@ public class PurchaseOverviewPage extends BaseTest {
     @FindBy(className = "title")
     public WebElement overviewPageTitle;
 
-    @FindBy(className = "summary_info")
+    @FindBy(className = "summary_info")  //payment informations
     public WebElement purchaseInfo;
 
     @FindBy(id = "finish")
@@ -27,10 +27,10 @@ public class PurchaseOverviewPage extends BaseTest {
     @FindBy(id = "cancel")
     public WebElement cancelButton2;
 
-    @FindBy(className = "inventory_item_price")
+    @FindBy(className = "inventory_item_price")  //price of single product
     public List<WebElement> productPrice;
 
-    @FindBy(className = "summary_tax_label")
+    @FindBy(className = "summary_tax_label")  //tax amount
     public WebElement tax;
 
 
@@ -48,9 +48,9 @@ public class PurchaseOverviewPage extends BaseTest {
         cancelButton2.click();
     }
 
-    public void getTotalPrice() {
-        productPrice.toArray(new WebElement[0]);
-        WebElement totalPriceCount = driver.findElement(By.className("summary_subtotal_label"));
+    public void getTotalPrice() {   //to verify that count prices of added products are equal to total price
+        productPrice.toArray(new WebElement[0]); //added products prices are in new array
+        WebElement totalPriceCount = driver.findElement(By.className("summary_subtotal_label")); //items total price
 
         double totalPrice = 0.0;
         double subtotal;
@@ -58,24 +58,24 @@ public class PurchaseOverviewPage extends BaseTest {
         double total;
 
         for (WebElement productPriceElement : productPrice) {
-            String productPriceText = productPriceElement.getText();
-            double productPrice = Double.parseDouble(productPriceText.replaceAll("[^\\d.]", ""));
+            String productPriceText = productPriceElement.getText(); //get price of single product as a String
+            double productPrice = Double.parseDouble(productPriceText.replaceAll("[^\\d.]", ""));  //String price of single product parsed in Double
             System.out.println("Product price: " + productPrice);
-            totalPrice += productPrice;
+            totalPrice += productPrice; //sum of single product prices
         }
         System.out.println("Item total: " + totalPrice);
 
-        String subtotalText = totalPriceCount.getText();
-        subtotal = Double.parseDouble(subtotalText.replaceAll("[^\\d.]", ""));
+        String subtotalText = totalPriceCount.getText();  //get items total price as a String
+        subtotal = Double.parseDouble(subtotalText.replaceAll("[^\\d.]", "")); //String items total price parsed in Double
         System.out.println("Subtotal: " + subtotal);
 
-        String taxText = tax.getText();
-        taxNumb = Double.parseDouble(taxText.replaceAll("[^\\d.]", ""));
+        String taxText = tax.getText();  //get tax amount as a String
+        taxNumb = Double.parseDouble(taxText.replaceAll("[^\\d.]", ""));  //String tax amount parsed in Double
         System.out.println("Tax: " + taxNumb);
-        total = subtotal + taxNumb;
+        total = subtotal + taxNumb;  //Count Total, sum of items total price and tax amount together
         System.out.println("Total(with tax): " + total);
 
-       if(totalPrice == subtotal) {
+       if(totalPrice == subtotal) {  //to verify that sum of all added products is equal to items total price
            System.out.println("Individual product prices sum up to the subtotal price");
        } else {
            System.out.println("Individual product prices do not sum up to the subtotal price");

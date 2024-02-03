@@ -28,7 +28,8 @@ public class LoginPage extends BaseTest {
     //--------------------------
 
     public void inputUsername(String userName) {
-        usernameField.clear();
+        usernameField.clear();  // Before each entry, it is necessary to do clear in case the descriptive text
+                                // of the field remains displayed inside the field when we enter data
         usernameField.sendKeys(userName);
     }
 

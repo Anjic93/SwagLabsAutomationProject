@@ -12,13 +12,13 @@ public class CartPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(className = "title")
+    @FindBy(className = "title")  //cart page title
     public WebElement cartTitle;
 
-    @FindBy(className = "cart_item")
+    @FindBy(className = "cart_item")  //list of added products in cart(displayed only when products are added)
     public List<WebElement> productsListInCart;
 
-    @FindBy(className = "inventory_item_name")
+    @FindBy(className = "inventory_item_name")  //name of added product in cart
     public WebElement productNameInList;
 
     @FindBy(id = "continue-shopping")

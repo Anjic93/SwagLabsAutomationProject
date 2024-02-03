@@ -14,7 +14,7 @@ public class PurchaseCompletePage extends BaseTest {
     @FindBy(className = "title")
     public WebElement completePageTitle;
 
-    @FindBy(className = "complete-header")
+    @FindBy(className = "complete-header")  //Thank You message on complete purchase page
     public WebElement thankYouMsg;
 
     @FindBy(id = "back-to-products")

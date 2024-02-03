@@ -14,10 +14,10 @@ public class CheckoutPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(className = "title")
+    @FindBy(className = "title")   //check out page title
     public WebElement checkoutPageTitle;
 
-    @FindBy(className = "checkout_info")
+    @FindBy(className = "checkout_info")  //form to be filled, for checkout
     public WebElement checkoutForm;
 
     @FindBy(id = "first-name")
@@ -32,7 +32,7 @@ public class CheckoutPage extends BaseTest {
     @FindBy(id = "continue")
     public WebElement continueButton;
 
-    @FindBy(css = ".error-message-container.error")
+    @FindBy(css = ".error-message-container.error")  //error message for invalid inputs
     public WebElement errorMessage;
 
     @FindBy(id = "cancel")

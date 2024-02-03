@@ -43,35 +43,41 @@ public class AddProductInCartFromIndividualProductPage extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertEquals(cartPage.getCartTitle(), "Your Cart");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
+
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }
     @Test(priority = 20)
     public void userCanAddProductFromIndividualProductPage() {
             productsPage.addRandomProduct();
-            String addedProduct = individualProductPage.getIndProductTitle();
+            String addedProduct = individualProductPage.getIndProductTitle();  //to get a name of added product
             System.out.println(addedProduct);
             Assert.assertTrue(individualProductPage.backToProductsButton.isDisplayed());
 
             individualProductPage.clickOnAddToCartIndButton();
             individualProductPage.checkRemoveButton();
             Assert.assertTrue(productsPage.cartBadge.isDisplayed());
+
             productsPage.clickOnCartIcon();
             Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
             Assert.assertTrue(cartPage.productsListInCart.getFirst().isDisplayed());
-            Assert.assertEquals(cartPage.getProductNameInList(), addedProduct);
+            Assert.assertEquals(cartPage.getProductNameInList(), addedProduct); //to verify that name of added
+                                                    // product is equal to the name of the product in the cart
         }
 
     @Test(priority = 30)
     public void userCanRemoveProductFromCart() {
         productsPage.addRandomProduct();
         Assert.assertTrue(individualProductPage.backToProductsButton.isDisplayed());
+
         individualProductPage.clickOnAddToCartIndButton();
-        individualProductPage.checkRemoveButton();
+        individualProductPage.checkRemoveButton();  //to verify that remove button is displayed after adding product
         individualProductPage.clickRemoveButton();
         individualProductPage.clickCartIcon();
+
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         Assert.assertTrue(cartPage.productsListInCart.isEmpty());
+
         cartPage.clickOnContinueShoppButton();
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
     }

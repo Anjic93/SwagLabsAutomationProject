@@ -14,18 +14,18 @@ public class IndividualProductPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = ".inventory_details_name.large_size")
+    @FindBy(css = ".inventory_details_name.large_size")  //name of product on single product's page
     public WebElement individualProductTitle;
 
     @FindBy(id = "back-to-products")
     public WebElement backToProductsButton;
 
-    @FindBy(css = ".btn.btn_primary.btn_small.btn_inventory ")
-    public List<WebElement> addToCartButtonInd;
+    @FindBy(css = ".btn.btn_primary.btn_small.btn_inventory ")  //Add to cart button on single product's page
+    public WebElement addToCartButtonInd;
 
-    @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")
+    @FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory")  //Remove button on single product's page
     public WebElement removeButton;
-    @FindBy(className = "shopping_cart_link")
+    @FindBy(className = "shopping_cart_link")   //Cart icon from single product's page
     public WebElement cartIcon2;
 
 
@@ -38,12 +38,10 @@ public class IndividualProductPage extends BaseTest {
     }
 
     public void clickOnAddToCartIndButton() {
-        Random random = new Random();
-        int randomNumber = random.nextInt(addToCartButtonInd.size());
-        addToCartButtonInd.get(randomNumber).click();
+        addToCartButtonInd.click();
     }
 
-    public void checkRemoveButton() {
+    public void checkRemoveButton() {  //to verify that remove button is displayed after adding product
         if(removeButton.getText().contains("Remove")) {
             removeButton.isDisplayed();
         }

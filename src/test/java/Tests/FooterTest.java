@@ -39,8 +39,8 @@ public class FooterTest extends BaseTest {
     @Test(priority = 10)
     public void userCanClickOnTwitterIcon() {
         productsPage.clickOnTwitter();
-        ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(listaTabova.get(1));
+        ArrayList<String> listaTabova = new ArrayList<>(driver.getWindowHandles()); //new tab windows list
+        driver.switchTo().window(listaTabova.get(1)); //to proceed on new tab window when social media opens
         Assert.assertEquals(driver.getCurrentUrl(), "https://twitter.com/saucelabs");
     }
 
