@@ -29,7 +29,7 @@ Packages:
 
 Files:
 
-- pom.xml - Contains all dependencies used in the project (last updated: 10.10.2023.)
+- pom.xml - Contains all dependencies used in the project 
 - Credentials.xlsx - Excel file used to read some data for DDT as an alternative
 - .gitignore - File used to store all items that are not pushed to github
 

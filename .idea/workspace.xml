@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AddProductInCartFromIndividualProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/SortMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/SortMenuTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="877105f2-58d0-4a89-9bbe-c2643ae35a70" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
